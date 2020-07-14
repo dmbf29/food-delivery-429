@@ -7,4 +7,12 @@ class Meal
     @name = attributes[:name]
     @price = attributes[:price]
   end
+
+  def self.headers
+    ['id', 'name', 'price']
+  end
+
+  def build_row
+    [@id, @name, @price]
+  end
 end
