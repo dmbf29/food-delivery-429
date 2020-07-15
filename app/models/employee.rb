@@ -11,4 +11,12 @@ class Employee
   def manager?
     @role == 'manager'
   end
+
+  def self.headers
+    ['id', 'username', 'password', 'role']
+  end
+
+  def build_row
+    [@id, @username, @password, @role]
+  end
 end
