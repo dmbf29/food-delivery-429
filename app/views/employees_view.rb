@@ -1,3 +1,4 @@
+require 'io/console'
 require_relative 'base_view'
 
 class EmployeesView < BaseView
