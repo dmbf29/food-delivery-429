@@ -18,6 +18,7 @@ class SessionsController
       @employees_view.welcome(employee)
       employee
     else
+      @employees_view.wrong_credentials
       sign_in
     end
   end

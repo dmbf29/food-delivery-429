@@ -12,8 +12,18 @@ class EmployeeRepository
     @employees
   end
 
+  def all_delivery_guys
+    @employees.select { |employee| employee.delivery_guy? }
+  end
+
   def find_by_username(username)
     @employees.find { |employee| employee.username == username }
+  end
+
+  def find(id)
+    @employees.find do |employee|
+      employee.id == id
+    end
   end
 
   private
